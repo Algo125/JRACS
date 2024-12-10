@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --first-color: #5d9c59;
+    --second-color: #c7e8ca;
+    --third-color: #79c280;
+    --fourth-color: #79c280;
+}
+body {
+    min-height: 100vh;
+    font-family: "Century Gothic", sans-serif;
+   
+    background-color: var(--first-color);
+}
+h1 {
+    font-weight: 800;
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 0 20px;
+}
+    h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust this value for spacing below the text */
+    left: 0;
+    width: 75%; /* Makes the underline 3/4 of the text width */
+    height: 3px; /* Thickness of the underline */
+    background-color: var(--second-color);
+}
+.container{
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    margin: 40px auto;
+    background-color: var(--first-color)
+}
+.filter-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.05);
+}
+button.active{
+    background: var(--second-color);
+    color: white;
+}
+.filterable-card{
+    display: flex;
+    margin-top: 25px; 
+    gap: 15px;  
+    flex-wrap: wrap;
+}
+.card{
+    flex-grow: 1;
+    flex-basis: 175px;
+    background-color: var(--second-color);
+    padding: 3px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.05);
+}
+.card.hide{
+    display: none;
+}
+.card .img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.card-body{
+    padding: 15px 20px 20px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 500;
+    color:black;
+}
+.card-text{
+    font-size: 10px;
+    color:black;
+}
+/*BUTTON PRICE*/
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--third-color);
+    border-radius: 30px; /* Reduced the border radius */
+    padding: 3px; /* Reduced the padding */
+    width: fit-content;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    padding: 7px 20px; /* Reduced horizontal and vertical padding */
+    background-color: var(--second-color);
+    color: var(--first-color);
+    border-radius: 15px; /* Reduced the border radius */
+    font-size: 12px; /* Smaller font size */
+    font-weight: bold;
+}
+
+.right-section {
+    padding: 7px 10px; /* Reduced padding */
+    background-color: var(--fourth-color);
+    color: white;
+    font-size: 12px; /* Smaller font size */
+    font-weight: bold;
+    border-radius: 20px; /* Reduced the border radius */
+}
+
+
+
+
+
+.navbar{
+    padding: 5px 30px;
+    background-color: var(--second-color) !important; 
+    border-bottom: 1px solid #b4d9b7; 
+}
+
+.nav-link {
+    color: var(--first-color) !important;
+    text-decoration: none; 
+    position: relative; 
+}
+
+.nav-link::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0; 
+    height: 2px; 
+    background-color: var(--first-color);
+    transition: width 0.3s ease; 
+}
+
+.nav-link:hover::after {
+    width: 100%; 
+}
+.custom-navbar .nav-item {
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 900;
+    
+}
+.d-flex .btn {
+    font-size: 15px; 
+    font-weight: bold; 
+}
