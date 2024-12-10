@@ -14,39 +14,91 @@ body {
     background-color: var(--first-color);
     background-color: var(--first-color);
   }
+/*Footer Navbar*/
 .navbar{
-    padding: 5px 30px;
-    background-color: var(--second-color) !important; 
-    border-bottom: 1px solid #b4d9b7; 
+  padding: 5px 30px;
+  background-color: var(--second-color) !important; 
+  border-bottom: 1px solid #b4d9b7; 
 }
 
 .nav-link {
-    color: var(--first-color) !important;
-    text-decoration: none; 
-    position: relative; 
+  color: var(--first-color) !important;
+  text-decoration: none; 
+  position: relative; 
 }
 
 .nav-link::after {
-    content: ""; 
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0; 
-    height: 2px; 
-    background-color: var(--first-color);
-    transition: width 0.3s ease; 
+  content: ""; 
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0; 
+  height: 2px; 
+  background-color: var(--first-color);
+  transition: width 0.3s ease; 
 }
 
 .nav-link:hover::after {
-    width: 100%; 
+  width: 100%; 
 }
 .custom-navbar .nav-item {
-    margin-right: 50px;
-    font-size: 15px;
-    font-weight: 900;
-    
+  margin-right: 50px;
+  font-size: 15px;
+  font-weight: 900; 
+}
+.d-flex .btn {
+  font-size: 15px; 
+  font-weight: bold; 
+}
+.btn-outline-success {
+  border-color: #28a745; 
+  color: #28a745; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+.btn-outline-success:hover {
+  background-color: var(--third-color);
+  color: var(--second-color);
+  border-color: var(--third-color);
 }
 
+
+footer {
+  background-color: var(--third-color)
+}
+footer h6 {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.footer-nav a {
+  font-size: 2px;
+  font-weight: bold;
+}
+
+footer .bi {
+  transition: transform 0.2s;
+}
+
+footer .bi:hover {
+  transform: scale(1.2);
+}
+.social-icons {
+  display: flex;
+  color: var(--second-color);
+  justify-content: center;
+  margin-top: 10px;
+}
+.social-icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: var(--second-color); 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover {
+  transform: scale(1.2); 
+}
+/**/
 /* Header Styles */
 .header {
   display: flex;
