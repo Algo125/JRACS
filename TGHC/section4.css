@@ -1,0 +1,81 @@
+:root {
+
+    --second-color: #c7e8ca;
+
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+   
+}
+
+.category-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+.health { background-color: #FF6B6B; }
+.nutrition { background-color: #4ECDC4; }
+.fitness { background-color: #45B7D1; }
+.mental-health { background-color: #96CEB4; }
+.research { background-color: #9B59B6; }
+.wellness { background-color: #F7D794; }
+.medical { background-color: #786FA6; }
+.lifestyle { background-color: #FF8B94; }
+
+
+@media (min-width: 1400px) {
+    .col-xxl-3 { flex: 0 0 25%; max-width: 25%; }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+}

@@ -1,0 +1,87 @@
+:root {
+    --second-color: #c7e8ca;
+    --first-color: #5d9c59; /* Define if missing */
+    --text-color: #333; /* Define if missing */
+}
+
+.section-5 {
+    padding: 2rem 0;
+}
+
+.main-container1 {
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 1.5rem;
+    background-color: var(--second-color);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(93, 156, 89, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 20px;
+    min-height: 500px;
+    transition: all 0.3s ease;
+}
+
+.container-box-title {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 6px solid var(--first-color);
+    border-radius: 30px;
+    background-color: var(--second-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-box-title h1 {
+    color: var(--first-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.container-box-title p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+
+/* Tablets and medium screens */
+@media (max-width: 992px) {
+    .main-container1 {
+        grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .container-box-title h1 {
+        font-size: 1.4rem; /* Adjust font size */
+    }
+
+    .container-box-title p {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+/* Mobile and small screens */
+@media (max-width: 576px) {
+    .main-container1 {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px; /* Smaller gap for compact screens */
+    }
+
+    .container-box-title {
+        padding: 15px; /* Reduce padding for smaller cards */
+    }
+
+    .container-box-title h1 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .container-box-title p {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+}

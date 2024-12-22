@@ -1,0 +1,127 @@
+:root {
+
+    --second-color: #c7e8ca;
+
+}
+/* Section 3 styling with improved responsiveness */
+.section3 {
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.section3 h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.healthy-tips {
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* Tips Banner Styles */
+
+
+.tips-slider {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    gap: clamp(8px, 2vw, 15px);
+    padding: clamp(5px, 1.5vw, 10px);
+    width: max-content;
+}
+
+.tip {
+    background: var(--second-color);
+    backdrop-filter: blur(5px);
+    padding: clamp(8px, 2vw, 20px);
+    border-radius: clamp(8px, 2vw, 15px);
+    white-space: nowrap;
+    font-size: clamp(12px, 3vw, 16px);
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 1vw, 8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tip:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.tip span:first-child {
+    font-size: clamp(14px, 3.5vw, 20px);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 10px));
+    }
+}
+
+/* Improved Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .section3 {
+        padding: 1rem 0;
+    }
+
+    .tips-banner {
+        margin: 0.5rem auto;
+        padding: 0.8rem;
+    }
+
+    .tip {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .tips-slider {
+        gap: 8px;
+        animation-duration: 45s; /* Slightly faster on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tips-banner::before,
+    .tips-banner::after {
+        width: 30px; /* Smaller fade effect on mobile */
+    }
+
+    .tip {
+        padding: 0.4rem 0.8rem;
+        font-size: 11px;
+    }
+
+    .tip span:first-child {
+        font-size: 14px;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .tips-slider {
+        animation-play-state: running !important;
+    }
+
+    .tip:active {
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Reduce Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    .tips-slider {
+        animation-duration: 90s;
+    }
+}
+
