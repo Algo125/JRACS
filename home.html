@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/home.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <title>JRAC PHARMACY</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>JRACS Drugstore</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="TGHC/footer.css">
+</head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <img src="IMAGE/jracsicon.png" alt="Logo" width="50" height="auto">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="service.html">SERVICE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="storelocator.html">STORE LOCATOR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">PRODUCT</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="home.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">SERVICE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="storelocator.html">STORE LOCATOR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">PRODUCT</a></li>
                 </ul>
                 <li class="d-flex">
                     <button class="btn btn-outline-success" onclick="window.location.href='tips.html'">TIPS FOR GOOD HEALTH</button>
@@ -42,106 +36,282 @@
         </div>
     </nav>
 
-    <!-- Main Hero Section -->
-    <div class="hero-section">
-        <div class="content-left">
-            <p class="subtitle">Reliable Ally in Wellness</p>
-            <h1 class="main-title">Your Health,<br>Our Priority.</h1>
-            <p class="description">
-                Our pharmacy is dedicated to providing exceptional care and trusted healthcare solutions for your well-being. We offer a wide range of prescription medications, over-the-counter products, and health essentials to meet your needs. Our knowledgeable pharmacists are always available to provide expert advice, answer your questions, and ensure safe and effective medication use. Committed to excellence, we strive to deliver personalized services and build lasting relationships with our customers, making your health our top priority.
-            </p>
-            <div class="cta-buttons">
-                <button 
-                class="btn-primary" 
-                onclick="window.location.href='product.html'">
-                SEE PRODUCTS
-            </button>
-            <button 
-                class="btn-secondary" 
-                onclick="window.location.href='storelocator.html'">
-                OUR LOCATIONS
-            </button>
+<!-- Hero Section Carousel with Line Indicators -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <div data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></div>
+      <div data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></div>
+      <div data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></div>
+    </div>
+  
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="hero-section custom-hero" style="background-image: url('IMAGE/1JRACS.png');">
+          <h1 style="font-size: 70px;">Gamot na Mabisa<br>Sa Presyong Tama!</h1>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="hero-section custom-hero" style="background-image: url('IMAGE/1PRODUCTS.png');">
+          <h1 style="font-size: 65px;">Trusted Brands</h1>
+          <p>Explore top health products</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="hero-section custom-hero" style="background-image: url('IMAGE/1ABOUT.png');">
+          <h1>Your Health, Our Priority</h1>
+          <p>Shop organic and natural items</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- PRODUCTS-->
+    <div class="container my-4">
+        <h1 class="offer-heading">WE OFFER!</h1>
+        <div class="row row-cols-1 row-cols-md-5 g-2">
+            <!-- Product Card -->
+            <div class="col">
+                <a href="product.html" class="card-link">
+                    <div class="card custom-card">
+                        <img src="IMAGE/MEDICINE.png" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">MEDICINE</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+             <!-- Product Card -->
+             <div class="col">
+                <a href="product.html" class="card-link">
+                <div class="card custom-card">
+                    <img src="IMAGE/MEDSUPP.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">MEDICAL SUPPLY</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Product Card -->
+            <div class="col">
+                <a href="product.html" class="card-link">
+                <div class="card custom-card">
+                    <img src="IMAGE/ESSENTIALS.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">ESSENTIALS</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Product Card -->
+            <div class="col">
+                <a href="product.html" class="card-link">
+                <div class="card custom-card">
+                    <img src="IMAGE/FOODSUPP.png" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">FOOD SUPPLEMENTS</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Product Card -->
+            <div class="col">
+                <a href="product.html" class="card-link">
+                <div class="card custom-card">
+                    <img src="IMAGE/HERBCOFF.png" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">HERBAL COFFEE</h5>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="content-right">
-            <img src="IMAGE/jracsFront.png" alt="JRACS Store Front" class="hero-image">
+    </a>
+    </div>
+    <!-- FEATURED PRODUCTS -->
+     
+    <!-- SERVICES -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Emergency Service Section -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="Tabs w-100">
+                    <i class="bi bi-telephone icon-custom"></i>
+                    <h5>WANT TO ASK MORE QUESTION?</h5>
+                    <p>Ask about your medicine and <br>get the answers you need.</p>
+                    <button class="see btn-custom mt-auto" onclick="window.location.href='storelocator.html#contact'">See More</button>
+                </div>
+            </div>
+            <!-- Opening Hours Section -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="Tabs w-100">
+                    <i class="bi bi-clock icon-custom"></i>
+                    <h5 style="font-size: 30px;">OPENING HOURS</h5>
+                    <p style="font-size: 25px">Monday To Saturday<br >6am to 9pm</p>
+                </div>
+            </div>
+            <!-- Appointment Section -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="Tabs w-100">
+                    <i class="bi bi-geo-alt icon-custom"></i>
+                    <h5>WANT TO SEE IF <br>YOU'RE NEARBY?</h5>
+                    <p>Check our store location and <br>visit us today!</p>
+                    <button class="book btn-custom mt-auto" onclick="window.location.href='storelocator.html'">See Location</button>
+                </div>
+            </div>
         </div>
     </div>
+    
+   <!-- History of JRACS -->
+<div class="history container my-5 p-4 rounded-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="content-left">
+                <p class="subtitle text-primary">Reliable Ally in Wellness</p>
+                <h1 class="main-title display-3 fw-bold">JRACS<br>PHARMACY</h1>
+                <p class="description text-muted">
+                    Founded in June 2010, JRACS began with a branch in Concepción Pequeña and now operates two branches in Panganiban and Concepción Pequeña, along with a warehouse in Concepción Grande. Based in Naga City, Philippines, JRACS specializes in distributing high-quality pharmaceutical products, including medicines, medical supplies, and health items, to healthcare institutions and pharmacies. The company is supported by a dedicated team of professionals committed to excellent service and timely delivery. JRACS prioritizes customer satisfaction and aims to build long-lasting relationships with clients.
 
-    <!-- Service Features Section -->
-    <div class="features-section">
-        <div class="feature-card">
-            <div class="feature-icon">
-                <div class="hexagon">
-                    <img src="IMAGE/hexagon-fill.svg">
-                    <i class="bi bi-truck icon-overlay"></i>
-                </div>
+                    Contact JRACS today to meet all your pharmaceutical needs.
+                </p>
             </div>
-            <h3>FAST SERVICE</h3>
-            <p>We prioritize efficiency to ensure you receive your medications without unnecessary delays.</p>
         </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">
-                <div class="hexagon">
-                    <img src="IMAGE/hexagon-fill.svg">
-                    <img src="IMAGE/two-men-talking-svgrepo-com.svg" class="icon-overlay">
-                </div>
+        
+        <div class="col-md-6">
+            <div class="content-right">
+                <img src="IMAGE/JRACShs.png" alt="JRACS Store Front" class="hero-image img-fluid rounded-3">
             </div>
-            <h3>GUIDANCE</h3>
-            <p>Our knowledgeable pharmacists are here to provide expert advice and personalized guidance for all your medication needs.</p>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">
-                <div class="hexagon">
-                    <img src="IMAGE/hexagon-fill.svg">
-                    <i class="bi bi-patch-check icon-overlay"></i>
-                </div>
-            </div>
-            <h3>TRUSTED</h3>
-            <p>As a trusted name in healthcare, we are committed to delivering quality products and exceptional service.</p>
         </div>
     </div>
-
-<!-- Footer Section -->
-<footer class="text-white text-center py-2 mt-auto">
-    <div class="container footer-container">
-        <div class="row justify-content-center align-items-center">
-          <!-- Left Section: Logo and Contact Info -->
-<div class="col-12 col-md-4 mb-1 mb-md-0 text-start">
-    <img src="IMAGE/logo.png" alt="JRACS Logo" width="40" height="auto" class="mb-1">
-    <h6 class="fw-bold fs-7">CONTACT US</h6>
-    <p class="mb-1" style="font-size: 0.70rem;">+639 957304068</p>
-    <p class="mb-1" style="font-size: 0.70rem;">jracspmaceutical@gmail.com</p>
-    <p class="mb-0" style="font-size: 0.70rem;">Door 2, Lahom Bldg, J Miranda Ave, Naga City</p>
 </div>
-            <!-- Center Section: Navigation Links -->
-            <div class="col-12 col-md-4 mb-1 mb-md-0 text-center">
-                <nav class="footer-nav d-flex justify-content-center flex-nowrap" style="white-space: nowrap;">
-                    <a href="home.html" class="text-black text-decoration-none mx-2" style="font-size: 1rem;">HOME</a>
-                    <a href="service.html" class="text-black text-decoration-none mx-2" style="font-size: 1rem;">SERVICE</a>
-                    <a href="storelocator.html" class="text-black text-decoration-none mx-2" style="font-size: 1rem;">STORE LOCATOR</a>
-                    <a href="product.html" class="text-black text-decoration-none mx-2" style="font-size: 1rem;">PRODUCT</a>
-                    <a href="tips.html" class="text-black text-decoration-none mx-2" style="font-size: 1rem;">TIPS FOR HEALTH</a>
-                </nav>
-                <p class="mt-2 mb-0" style="font-size: 0.9rem;">&copy;2024 JRACS. All Rights Reserved</p>
-            </div>
 
-            <!-- Right Section: Social Media Icons -->
-            <div class="col-12 col-md-4 text-center">
-                <h6 class="fw-bold fs-7">FOLLOW US!</h6>
-                <div class="social-icons d-flex justify-content-center mt-2">
-                    <a href="#" class="social-icon  mx-2 fs-10"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon  mx-2 fs-10"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-icon  mx-2 fs-10"><i class="bi bi-twitter"></i></a>
-                </div>
-                
+<!--HEXAGON CONTAINER-->
+<div class="hexCont">
+    <div class="box">
+        <h1>17</h1>
+        <p>YEARS IN SERVICE</p>
+    </div>
+    <div class="box">
+        <h1>5.5</h1>
+        <p>CUSTOMER REVIEW</p>
+    </div>
+    <div class="box">
+        <h1 class="fyear">2010</h1>
+        <p class="founded">FOUNDED</p>
+    </div>
+    <div class="box">
+        <h1>3</h1>
+        <p>BRANCHES</p>
+    </div>
+    <div class="box">
+        <h1>350+</h1>
+        <p>MEDICINE AVAILABLE</p>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="container">
+    <div class="row">
+        <!-- Card 1 - Branch Manager -->
+        <div class="col-md-4">
+            <div class="card card-custom branch-manager">
+                <img src="IMAGE/BM1.png" alt="Daryl B" class="card-img-top">
+                <h5 class="card-title">JUAN DELA CRUZ</h5>
+                <h3 class="card-text">BRANCH MANAGER</h3>
+                <p>We prioritize efficiency to ensure you receive your medications without unnecessary delays.</p>
             </div>
+        </div>
+
+        <!-- Card 2 - Owner -->
+        <div class="col-md-4">
+            <div class="card card-custom owner">
+                <img src="IMAGE/OWNER.png" alt="Daryl B" class="card-img-top">
+                <h5 class="card-title">ROSELLA FRANES CARBONELL</h5>
+                <h3 class="card-text">OWNER</h3>
+                <p>We prioritize efficiency to ensure you receive your medications without unnecessary delays.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 - Branch Manager -->
+        <div class="col-md-4">
+            <div class="card card-custom branch-manager">
+                <img src="IMAGE/BM2.png" alt="Daryl B" class="card-img-top">
+                <h5 class="card-title">LILLY DIMAGIBA</h5>
+                <h3 class="card-text">BRANCH MANAGER</h3>
+                <p>We prioritize efficiency to ensure you receive your medications without unnecessary delays.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <img src="IMAGE/jracsicon.png" alt="Logo" width="70" height="auto">
+        <strong style="color: black;">JRACS Pharmaceutical</strong>
+
+        <p class="footer-links">
+            <a href="home.html">HOME</a>
+            |
+            <a href="service.html">SERVICE</a>
+            |
+            <a href="storelocator.html">STORE LOCATOR</a>
+            |
+            <a href="product.html">PRODUCT</a>
+            |
+            <a href="tips.html">TIPS FOR GOOD HEALTH</a>
+        </p>
+
+        <p class="footer-company-name">
+            Â© 2024 JRACS. All Rights Reserved
+        </p>
+    </div>
+
+    <div class="footer-center" style="color: black;">
+        <div>
+            <i class="bi bi-geo-alt-fill"></i>
+            <p><span>Door 2, Lahom Bldg</span>J Miranda Ave, Naga City</p>
+            
+        </div>
+        <div>
+            <i class="bi bi-telephone-fill"></i>
+            <span>+639 957304068</span>
+        </div>
+        <div>
+            <i class="bi bi-envelope-fill"></i>
+            <span>jracspharmaceutical@gmail.com</span>
+        </div>
+    </div>
+
+    <div class="footer-right" style="color: black;">
+        <p class="footer-company-about">
+            <strong >JRACS Pharmaceutical</strong> is a pharmacy that sells medecine 
+        </p>
+        <div class="footer-icons">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-twitter"></i></a>
         </div>
     </div>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const heroCarousel = document.querySelector('#heroCarousel');
 
+  // Initialize Bootstrap carousel
+  const carousel = new bootstrap.Carousel(heroCarousel, {
+    interval: 2500, // Set interval to 5 seconds (adjust as needed)
+    ride: 'carousel'
+  });
+});
+
+</script>
 </body>
+
 </html>

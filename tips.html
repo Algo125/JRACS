@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/footer.css">
-        <link rel="stylesheet" href="CSS/tips.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <title>Store Locator</title>
-    </head>
-    
-<body class="d-flex flex-column min-vh-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="TGHC/mainstyle.css">
+    <link rel="stylesheet" href="TGHC/section1.css">
+    <link rel="stylesheet" href="TGHC/section3.css">
+    <link rel="stylesheet" href="TGHC/section4.css">
+    <link rel="stylesheet" href="TGHC/section5.css">
+    <link rel="stylesheet" href="TGHC/footer.css">
+    <link rel="stylesheet" href="TGHC/messengebox.css">
+
+</head>
+<body>
     <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/jracsicon.png" alt="Logo" width="50" height="auto">
+                <img src="IMAGE/logo.png" alt="Logo" width="50" height="auto">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,151 +42,625 @@
                     </li>
                 </ul>
                 <li class="d-flex" role="search">
-                    <button class="btn btn-outline-success" href="tips.html">TIPS FOR GOOD HEALTH</button>
-                </li> 
+                    <button class="btn btn-outline-success" onclick="window.location.href='tips.html';">TIPS FOR GOOD HEALTH</button>
+                </li>
             </div>
         </div>
     </nav>
-    <body style="background-color: var(--first-color);">
+    <!-- Header Banner -->
+    <section class="banner">
+        <img src="TGH/HEALTH CARD/bannerbato.jfif" class="banner-image" alt="Health Banner">
+        <div class="banner-content">
+            <h1>HEALTH & WELLNESS GUIDE</h1>
+            <p>Your complete guide to a healthier lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Health Cards -->
+    <section class="health-container">
+        <h2 class="text-center mb-4" style="color: var(--second-color); text-transform: uppercase; font-weight: bold; font-size: 4.5rem; text-decoration: underline var(--third-color)" >GOOD HEALTH</h2>
+        <div class="health-grid">
+            <!-- Nutrition Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/healthyfoood.jfif" alt="Healthy Nutrition">
+                </div>
+                <div class="card-content">
+                    <h3>Healthy Nutrition</h3>
+                    <ul>
+                        <li>Eat colorful fruits and vegetables daily</li>
+                        <li>Choose whole grains over refined</li>
+                        <li>Include lean proteins in your diet</li>
+                        <li>Drink 8 glasses of water daily</li>
+                        <li>Limit processed foods and sugars</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Exercise Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/running.jfif" alt="Physical Activity">
+                </div>
+                <div class="card-content">
+                    <h3>Physical Activity</h3>
+                    <ul>
+                        <li>30 minutes of daily exercise</li>
+                        <li>Mix cardio and strength training</li>
+                        <li>Take regular walking breaks</li>
+                        <li>Practice flexibility exercises</li>
+                        <li>Find activities you enjoy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mental Health Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/girl.jfif" alt="Mental Wellness">
+                </div>
+                <div class="card-content">
+                    <h3>Mental Wellness</h3>
+                    <ul>
+                        <li>Practice daily meditation</li>
+                        <li>Maintain a gratitude journal</li>
+                        <li>Get 7–9 hours of quality sleep</li>
+                        <li>Set boundaries for work-life balance</li>
+                        <li>Stay connected with loved ones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sleep Health Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/sleep.jpg" alt="Sleep Health">
+                </div>
+                <div class="card-content">
+                    <h3>Sleep Health</h3>
+                    <ul>
+                        <li>Maintain a consistent sleep schedule</li>
+                        <li>Create a relaxing bedtime routine</li>
+                        <li>Optimize bedroom environment</li>
+                        <li>Limit screen time before bed</li>
+                        <li>Avoid late caffeine consumption</li> 
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stress Management Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/stress-management.avif" alt="Stress Management">
+                </div>
+                <div class="card-content">
+                    <h3>Stress Management</h3>
+                    <ul>
+                        <li>Practice deep breathing exercises</li>
+                        <li>Take regular breaks during work</li>
+                        <li>Engage in relaxing hobbies</li>
+                        <li>Practice time management</li>
+                        <li>Seek support when needed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Preventive Care Card -->
+            <div class="health-card">
+                <div class="card-image">
+                    <img src="TGH/HEALTH CARD/docktor.jfif" alt="Preventive Care">
+                </div>
+                <div class="card-content">
+                    <h3>Preventive Care</h3>
+                    <ul>
+                        <li>Schedule regular check-ups</li>
+                        <li>Keep vaccinations up to date</li>
+                        <li>Regular dental examinations</li>
+                        <li>Monitor blood pressure regularly</li>
+                        <li>Practice good hygiene habits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
         <!-- Carousel Section -->
         <section class="section-1">
-            <div class="header-title">
-                <h1>TIPS FOR GOOD</h1>
-                <h2>HEALTH</h2>
-            </div>
-    
+            <h2 class="text-center mb-4" style="color: var(--second-color); text-transform: uppercase; font-weight: bold; font-size: 2.5rem; text-decoration: underline var(--third-color)">MAINTAINING GOOD HEALTH</h2>
             <div class="main-container">
-                <div id="mainCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                <div id="mainCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="5000">
                     <div class="carousel-inner">
-                        <!-- First Slide -->
-                        <div class="carousel-item active">
-                            <img src="img/bg.png" alt="Slide 1">
-                            <div class="carousel-caption">
-                                <p>Start your day with a healthy breakfast that includes protein and fiber.</p>
-                                <p>This helps maintain energy levels throughout the morning, making you more productive.</p>
-                            </div>
+                    <!-- Adding 20 Health Tips as Slides -->
+                    <div class="carousel-item active">
+                        <img src="TGH/1-20190529-091438-lr.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>1. Eat a healthy diet</h5>
+                            <p>Eat a combination of different foods, including fruit, vegetables, legumes, nuts and whole grains. Adults should eat at least five portions (400g) of fruit and vegetables per day. You can improve your intake of fruits and vegetables by always including veggies in your meal; eating fresh fruit and vegetables as snacks; eating a variety of fruits and vegetables; and eating them in season. By eating healthy, you will reduce your risk of malnutrition and noncommunicable diseases (NCDs) such as diabetes, heart disease, stroke and cancer..</p>
                         </div>
-                        <!-- Second Slide -->
-                        <div class="carousel-item">
-                            <img src="img/bg2.png" alt="Slide 2">
-                            <div class="carousel-caption">
-                                <p>Drink plenty of water throughout the day to stay hydrated.</p>
-                                <p>Staying hydrated supports your body's vital functions and keeps your skin healthy.</p>
-                            </div>
-                        </div>
-                        <!-- Third Slide -->
-                        <div class="carousel-item">
-                            <img src="img/bg3.png" alt="Slide 3">
-                            <div class="carousel-caption">
-                                <p>Exercise regularly to improve your physical and mental health.</p>
-                                <p>Physical activity boosts mood, strengthens the heart, and helps manage weight.</p>
-                            </div>
-                        </div>
-                        <!-- Additional Slides Here -->
                     </div>
     
-                    <div class="custom-pagination">
-                        <button class="arrow-btn" id="prevBtn">
-                            <span>&lt;</span>
-                        </button>
-                        <div class="pagination-dots">
-                            <span class="dot active" onclick="goToSlide(0)"></span>
-                            <span class="dot" onclick="goToSlide(1)"></span>
-                            <span class="dot" onclick="goToSlide(2)"></span>
+                    <div class="carousel-item">
+                        <img src="TGH/2-who-056764-orig.webp">
+                        <div class="carousel-caption">
+                            <h5>2. Consume less salt and sugar</h5>
+                            <p>Filipinos consume twice the recommended sodium, increasing risks of high blood pressure, heart disease, and stroke. Limit salt intake to 5g (1 teaspoon) daily by reducing salty condiments, avoiding salty snacks, and choosing low-sodium products. 
+    
+                                Excess sugar intake leads to tooth decay and weight gain. Keep free sugars below 10% of total energy intake (50g or 12 teaspoons), with under 5% recommended for better health. Reduce sugar by avoiding sugary snacks, candies, and beverages.</p>
                         </div>
-                        <button class="arrow-btn" id="nextBtn">
-                            <span>&gt;</span>
-                        </button>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/3-who-056149-img.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>3. Reduce intake of harmful fats</h5>
+                            <p>Fats should make up less than 30% of your total energy intake to prevent weight gain and non-communicable diseases (NCDs). Choose unsaturated fats (found in fish, avocado, nuts, and certain oils) over saturated fats and trans fats. Limit saturated fats to under 10% and trans fats to under 1% of your total energy intake. Replace these with unsaturated fats for better health. Avoid saturated fats (in fatty meats, butter, and cheese) and trans fats (in baked, fried, and pre-packaged foods).</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/4-who-056030-img.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>4. Avoid harmful use of alcohol</h5>
+                            <p>There is no safe level for drinking alcohol. Consuming alcohol can lead to health problems such as mental and behavioural disorders, including alcohol dependence, major NCDs such as liver cirrhosis, some cancers and heart diseases, as well as injuries resulting from violence and road clashes and collisions..</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/5-f9-05052016-ph-03850-lr.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>5. Don’t smoke
+                            </h5>
+                            <p>Smoking causes non-communicable diseases (NCDs) like lung disease, heart disease, and stroke, harming both smokers and non-smokers through second-hand smoke. Around 15.9 million Filipino adults smoke, but 7 in 10 want to quit. 
+    
+                                If you smoke, it's never too late to stop and enjoy immediate and long-term health benefits. If you don’t smoke, avoid starting and advocate for tobacco-free environments.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/6.jpg">
+                        <div class="carousel-caption">
+                            <h5>6. Be active</h5>
+                            <p>Physical activity is defined as any bodily movement produced by skeletal muscles that requires energy expenditure. This includes exercise and activities undertaken while working, playing, carrying out household chores, travelling, and engaging in recreational pursuits. The amount of physical activity you need depends on your age group but adults aged 18-64 years should do at least 150 minutes of moderate-intensity physical activity throughout the week. Increase moderate-intensity physical activity to 300 minutes per week for additional health benefits.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/7.jpg">
+                        <div class="carousel-caption">
+                            <h5>7. Get tested</h5>
+                            <p>Getting yourself tested is an important step in knowing your health status, especially when it comes to HIV, hepatitis B, sexually-transmitted infections (STIs) and tuberculosis (TB). Left untreated, these diseases can lead to serious complications and even death. Knowing your status means you will know how to either continue preventing these diseases or, if you find out that you’re positive, get the care and treatment that you need. Go to a public or private health facility, wherever you are comfortable, to have yourself tested.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/8.jpg">
+                        <div class="carousel-caption">
+                            <h5>8. Check your blood pressure regularly</h5>
+                            <p>Hypertension, or high blood pressure, is called a “silent killer”. This is because many people who have hypertension may not be aware of the problem as it may not have any symptoms. If left uncontrolled, hypertension can lead to heart, brain, kidney and other diseases. Have your blood pressure checked regularly by a health worker so you know your numbers. If your blood pressure is high, get the advice of a health worker. This is vital in the prevention and control of hypertension.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/9.jpg">
+                        <div class="carousel-caption">
+                            <h5>9. Get vaccinated</h5>
+                            <p>Vaccination is one of the most effective ways to prevent diseases. Vaccines work with your body’s natural defences to build protection against diseases like cervical cancer, cholera, diphtheria, hepatitis B, influenza, measles, mumps, pneumonia, polio, rabies, rubella, tetanus, typhoid, and yellow fever.
+    
+                                In the Philippines, free vaccines are provided to children 1 year old and below as part of the Department of Health’s routine immunization programme. If you are an adolescent or adult, you may ask your physician if to check your immunization status or if you want to have yourself vaccinated.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/10.jpg">
+                        <div class="carousel-caption">
+                            <h5>10. Practice safe sex</h5>
+                            <p>Looking after your sexual health is important for your overall health and well-being. Practice safe sex to prevent HIV and other sexually transmitted infections like gonorrhoea and syphilis. There are available prevention measures such as pre-exposure prophylaxis (PrEP) that will protect you from HIV and condoms that will protect you from HIV and other STIs.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/11.jpg">
+                        <div class="carousel-caption">
+                            <h5>11. Cover your mouth when coughing or sneezing</h5>
+                            <p>Diseases such as influenza, pneumonia and tuberculosis are transmitted through the air. When an infected person coughs or sneezes, infectious agents may be passed on to others through airborne droplets. When you feel a cough or sneeze coming on, make sure you have covered your mouth with a face mask or use a tissue then dispose it carefully. If you do not have a tissue close by when you cough or sneeze, cover your mouth as much as possible with the crook (or the inside) of your elbow.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/12.jpg">
+                        <div class="carousel-caption">
+                            <h5>12. Prevent mosquito bites</h5>
+                            <p>Mosquitoes are one of the deadliest animals in the world. Diseases like dengue, chikungunya, malaria and lymphatic filariasis are transmitted by mosquitoes and continue to affect Filipinos. You can take simple measures to protect yourself and your loved ones against mosquito-borne diseases. If you’re traveling to an area with known mosquito-borne diseases, consult a physician for a vaccine to prevent diseases such as Japanese encephalitis and yellow fever or if you need to take antimalarial medicines. Wear light-coloured, long-sleeved shirts and pants and use insect repellent. At home, use window and door screens, use bed nets and clean your surroundings weekly to destroy mosquito breeding sites..</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/13.jpg">
+                        <div class="carousel-caption">
+                            <h5>13. Follow traffic laws</h5>
+                            <p>Road crashes claim over one million lives around the world and millions more are injured. Road traffic injuries are preventable through a variety of measures implemented by the government such as strong legislation and enforcement, safer infrastructure and vehicle standards, and improved post-crash care. You yourself can also prevent road crashes by ensuring that you follow traffic laws such as using the seatbelt for adults and child restraint for your kids, wearing a helmet when riding a motorcycle or bicycle, not drinking and driving, and not using your mobile phone while driving.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/14.jpg">
+                        <div class="carousel-caption">
+                            <h5>14. Drink only safe water</h5>
+                            <p>Drinking unsafe water can lead to water-borne diseases such as cholera, diarrhoea, hepatitis A, typhoid and polio. Globally, at least 2 billion people use a drinking water source contaminated with faeces. Check with your water concessionaire and water refilling station to ensure that the water you’re drinking is safe. In a setting where you are unsure of your water source, boil your water for at least one minute. This will destroy harmful organisms in the water. Let it cool naturally before drinking.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/15.jpg">
+                        <div class="carousel-caption">
+                            <h5>15. Breastfeed babies from 0 to 2 years and beyond</h5>
+                            <p>Breastfeeding is the best way to provide the ideal food for newborns and infants. WHO recommends that mothers initiate breastfeeding within one hour of birth. Breastfeeding for the first six months is crucial for the baby to grow up healthy. It is recommended that breastfeeding is continued for up to two years and beyond. Aside from being beneficial to babies, breastfeeding is also good for the mother as it reduces the risk of breast and ovarian cancer, type II diabetes, and postpartum depression.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/16.jpg">
+                        <div class="carousel-caption">
+                            <h5>16. Talk to someone you trust if you're feeling down</h5>
+                            <p>Depression is a common illness worldwide with over 260 million people affected. Depression can manifest in different ways, but it might make you feel hopeless or worthless, or you might think about negative and disturbing thoughts a lot or have an overwhelming sense of pain. If you’re going through this, remember that you are not alone. Talk to someone you trust such as a family member, friend, colleague or mental health professional about how you feel. If you feel that you are in danger of harming yourself, contact the National Center for Mental Health hotline at 0917-899-USAP (8727).</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/17.jpg">
+                        <div class="carousel-caption">
+                            <h5>17.  Take antibiotics only as prescribed</h5>
+                            <p>Antibiotic resistance is one of the biggest public health threats in our generation. When antibiotics lose their power, bacterial infections become harder to treat, leading to higher medical costs, prolonged hospital stays, and increased mortality. Antibiotics are losing their power because of misuse and overuse in humans and animals. Make sure you only take antibiotics if prescribed by a qualified health professional. And once prescribed, complete the treatment days as instructed. Never share antibiotics.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/18-img-7843-lr.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>18. Clean your hands properly</h5>
+                            <p>Hand hygiene is critical not only for health workers but for everyone. Clean hands can prevent the spread of infectious illnesses. You should handwash using soap and water when your hands are visibly soiled or handrub using an alcohol-based product.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/19-vlcsnap-2019-06-07-10h12m40s630.tmb-1366v.jpg">
+                        <div class="carousel-caption">
+                            <h5>19. Prepare your food correctly</h5>
+                            <p>Unsafe food containing harmful bacteria, viruses, parasites or chemical substances, causes more than 200 diseases – ranging from diarrhoea to cancers. When buying food at the market or store, check the labels or the actual produce to ensure it is safe to eat. If you are preparing food, make sure you follow the Five Keys to Safer Food: (1) keep clean; (2) separate raw and cooked; (3) cook thoroughly; (4) keep food at safe temperatures; and (5) use safe water and raw materials.</p>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="TGH/20-f36-30032017-ph-4345-lr.tmb-1366v.jpg">
+                                <div class="carousel-caption">
+                                    <h5>20. Have regular check-ups</h5>
+                                    <p>Regular check-ups can help find health problems before they start. Health professionals can help find and diagnose health issues early, when your chances for treatment and cure are better. Go to your nearest health facility to check out the the health services, screenings and treatment that are accessible to you.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="custom-pagination">
+                            <div class="pagination-dots">
+                                <span class="dot active" onclick="goToSlide(0)"></span>
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                                <span class="dot" onclick="goToSlide(4)"></span>
+                                <span class="dot" onclick="goToSlide(5)"></span>
+                                <span class="dot" onclick="goToSlide(6)"></span>
+                                <span class="dot" onclick="goToSlide(7)"></span>
+                                <span class="dot" onclick="goToSlide(8)"></span>
+                                <span class="dot" onclick="goToSlide(9)"></span>
+                                <span class="dot" onclick="goToSlide(10)"></span>
+                                <span class="dot" onclick="goToSlide(11)"></span>
+                                <span class="dot" onclick="goToSlide(12)"></span>
+                                <span class="dot" onclick="goToSlide(13)"></span>
+                                <span class="dot" onclick="goToSlide(14)"></span>
+                                <span class="dot" onclick="goToSlide(15)"></span>
+                                <span class="dot" onclick="goToSlide(16)"></span>
+                                <span class="dot" onclick="goToSlide(17)"></span>
+                                <span class="dot" onclick="goToSlide(18)"></span>
+                                <span class="dot" onclick="goToSlide(19)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+    
+        const carouselElement = document.getElementById('mainCarousel');
+        const carousel = new bootstrap.Carousel(carouselElement);
+        const intervalTime = 5000; // 5 seconds
+        let slideInterval;
+    
+        // Function to go to a specific slide
+        const goToSlide = (index) => {
+            carousel.to(index);
+            updateDots(index);
+        };
+    
+        // Function to update active dot
+        const updateDots = (index) => {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        };
+    
+        // Function to start automatic sliding
+        const startAutoSlide = () => {
+            slideInterval = setInterval(() => {
+                const activeIndex = Array.from(carouselElement.querySelectorAll('.carousel-item')).findIndex(item => item.classList.contains('active'));
+                const nextIndex = (activeIndex + 1) % carouselElement.querySelectorAll('.carousel-item').length;
+                goToSlide(nextIndex);
+            }, intervalTime);
+        };
+    
+        // Start auto sliding when the page loads
+        window.onload = () => {
+            startAutoSlide();
+            carouselElement.addEventListener('slid.bs.carousel', () => {
+                clearInterval(slideInterval); // Clear the interval while sliding
+                startAutoSlide(); // Restart the interval
+            });
+        };
+    
+            </script>
+
+    <section class="section3" id="section3">
+        <h2 class="text-center mb-4" style="color: var(--second-color); text-transform: uppercase; font-weight: bold; font-size: 4.5rem; text-decoration: underline var(--third-color)">Quick Tips</h2>
+            <div class="healthy-tips">
+                <div class="tips-banner">
+                    <div class="tips-slider">
+                        <!-- Tips List -->
+                        <div class="tip"><span>💧</span><span>Drink water first thing in the morning</span></div>
+                        <div class="tip"><span>🍎</span><span>Eat breakfast within an hour of waking</span></div>
+                        <div class="tip"><span>🚶‍♂️</span><span>Take 10,000 steps daily</span></div>
+                        <div class="tip"><span>😴</span><span>Sleep 7-8 hours every night</span></div>
+                        <div class="tip"><span>🧘‍♀️</span><span>Meditate for 10 minutes daily</span></div>
+                        <div class="tip"><span>📱</span><span>Take breaks from screen time</span></div>
+                        <div class="tip"><span>🥗</span><span>Eat more vegetables daily</span></div>
+                        <div class="tip"><span>💪</span><span>Exercise for 30 minutes</span></div>
+                        <div class="tip"><span>🌞</span><span>Get morning sunlight</span></div>
+                        <div class="tip"><span>🧘‍♂️</span><span>Practice deep breathing</span></div>
+                        <div class="tip"><span>📝</span><span>Journal your thoughts</span></div>
+                        <div class="tip"><span>🥤</span><span>Limit sugary drinks</span></div>
+                        <div class="tip"><span>🍽️</span><span>Practice portion control</span></div>
+                        <div class="tip"><span>🚰</span><span>Drink 8 glasses of water</span></div>
+                        <div class="tip"><span>🏃‍♀️</span><span>Do cardio exercises</span></div>
+                        <div class="tip"><span>🧠</span><span>Learn something new daily</span></div>
+                        <div class="tip"><span>📚</span><span>Read for 30 minutes</span></div>
+                        <div class="tip"><span>🎵</span><span>Listen to uplifting music</span></div>
+                        <div class="tip"><span>🌙</span><span>Have a bedtime routine</span></div>
+                        <div class="tip"><span>💆‍♀️</span><span>Practice self-care</span></div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="tip"><span>💧</span><span>Drink water first thing in the morning</span></div>
+                        <div class="tip"><span>🍎</span><span>Eat breakfast within an hour of waking</span></div>
+                        <div class="tip"><span>🚶‍♂️</span><span>Take 10,000 steps daily</span></div>
+                        <div class="tip"><span>😴</span><span>Sleep 7-8 hours every night</span></div>
+                        <div class="tip"><span>🧘‍♀️</span><span>Meditate for 10 minutes daily</span></div>
+                        <div class="tip"><span>📱</span><span>Take breaks from screen time</span></div>
+                        <div class="tip"><span>🥗</span><span>Eat more vegetables daily</span></div>
+                        <div class="tip"><span>💪</span><span>Exercise for 30 minutes</span></div>
+                        <div class="tip"><span>🌞</span><span>Get morning sunlight</span></div>
+                        <div class="tip"><span>🧘‍♂️</span><span>Practice deep breathing</span></div>
+                        <div class="tip"><span>📝</span><span>Journal your thoughts</span></div>
+                        <div class="tip"><span>🥤</span><span>Limit sugary drinks</span></div>
+                        <div class="tip"><span>🍽️</span><span>Practice portion control</span></div>
+                        <div class="tip"><span>🚰</span><span>Drink 8 glasses of water</span></div>
+                        <div class="tip"><span>🏃‍♀️</span><span>Do cardio exercises</span></div>
+                        <div class="tip"><span>🧠</span><span>Learn something new daily</span></div>
+                        <div class="tip"><span>📚</span><span>Read for 30 minutes</span></div>
+                        <div class="tip"><span>🎵</span><span>Listen to uplifting music</span></div>
+                        <div class="tip"><span>🌙</span><span>Have a bedtime routine</span></div>
+                        <div class="tip"><span>💆‍♀️</span><span>Practice self-care</span></div>
                     </div>
                 </div>
             </div>
+        </style>
+
+        <!-- Improved JavaScript for better performance -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tipsSlider = document.querySelector('.tips-slider');
+            let scrollInterval;
+            let isVisible = false;
+        
+            // Intersection Observer for performance
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    isVisible = entry.isIntersecting;
+                    if (isVisible) {
+                        startScroll();
+                    } else {
+                        stopScroll();
+                    }
+                });
+            }, { threshold: 0.1 });
+        
+            observer.observe(tipsSlider);
+        
+            function startScroll() {
+                if (!scrollInterval && isVisible) {
+                    scrollInterval = requestAnimationFrame(scroll);
+                }
+            }
+        
+            function stopScroll() {
+                if (scrollInterval) {
+                    cancelAnimationFrame(scrollInterval);
+                    scrollInterval = null;
+                }
+            }
+        
+            function scroll() {
+                if (!isVisible) return;
+        
+                const currentScroll = tipsSlider.scrollLeft;
+                const maxScroll = tipsSlider.scrollWidth / 2;
+        
+                if (currentScroll >= maxScroll) {
+                    tipsSlider.scrollLeft = 0;
+                } else {
+                    tipsSlider.scrollLeft += 1;
+                }
+        
+                scrollInterval = requestAnimationFrame(scroll);
+            }
+        
+            // Pause on hover for desktop only
+            if (window.matchMedia('(hover: hover)').matches) {
+                tipsSlider.addEventListener('mouseenter', stopScroll);
+                tipsSlider.addEventListener('mouseleave', startScroll);
+            }
+        
+            // Handle visibility change
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopScroll();
+                } else if (isVisible) {
+                    startScroll();
+                }
+            });
+        });
+        </script>
         </section>
-    
-        <!-- New Section with Health Tips -->
-        <section class="section-2">
-            <div class="header-tips">
-                <h1>DID YOU</h1>
-                <h2>KNOW?</h2>
-            </div>
-    
-            <div class="main-container1">
-                <!-- Container 1 -->
-                <div class="container-box-title">
-                    <h1>TIPS FOR GOOD HEALTH</h1>
-                    <p>Start your day with a healthy breakfast that includes protein and fiber.</p>
-                </div>
-                <!-- Container 2 -->
-                <div class="container-box-title">
-                    <h1>STAY ACTIVE</h1>
-                    <p>Regular exercise helps to maintain physical and mental well-being.</p>
-                </div>
-                <!-- Container 3 -->
-                <div class="container-box-title">
-                    <h1>STAY HYDRATED</h1>
-                    <p>Drink plenty of water throughout the day to keep your body hydrated.</p>
-                </div>
-                <!-- Container 4 -->
-                <div class="container-box-title">
-                    <h1>GET ENOUGH SLEEP</h1>
-                    <p>A good night's sleep helps to recharge your body and mind.</p>
-                </div>
-                <!-- Container 5 -->
-                <div class="container-box-title">
-                    <h1>MAINTAIN A BALANCED DIET</h1>
-                    <p>Eat a variety of foods to ensure you're getting all essential nutrients.</p>
-                </div>
-                <!-- Container 6 -->
-                <div class="container-box-title">
-                    <h1>MANAGE STRESS</h1>
-                    <p>Practice relaxation techniques to reduce stress and improve mental health.</p>
-                </div>
-            </div>
-        </section>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/tips.js"></script>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="container">
-        <div class="row justify-content-center align-items-start">
-            <!-- Left Section: Logo and Contact Info -->
-            <div class="col-12 col-md-4 footer-contact">
-                <img src="IMAGE/logo.png" alt="JRACS Logo" class="footer-logo">
-                <h6 class="footer-heading">CONTACT US</h6>
-                <p class="footer-text">+639 957304068</p>
-                <p class="footer-text">jracspmaceutical@gmail.com</p>
-                <p class="footer-text">Door 2, Lahom Bldg, J Miranda Ave, Naga City</p>
-            </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container my-5">
+        <h2 style="color: var(--second-color); text-transform: uppercase; font-weight: bold; font-size: 3.5rem;text-decoration: underline var(--third-color)" class="text-center mb-4">PREVENT HEALTH ISSUE</h2>
 
-            <!-- Center Section: Navigation Links -->
-            <div class="col-12 col-md-4 footer-nav-section">
-                <nav class="footer-nav">
-                    <a href="home.html">HOME</a>
-                    <a href="service.html">SERVICE</a>
-                    <a href="storelocator.html">STORE LOCATOR</a>
-                    <a href="product.html">PRODUCT</a>
-                    <a href="#">TIPS FOR HEALTH</a>
-                </nav>
-                <p class="copyright">&copy;2024 JRACS. All Rights Reserved</p>
+        <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/b675ab4d-dbad-4dd0-9656-a434474c078f.webp" alt="Portfolio Diet" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Stomach Ulcer? Here’s What to Know</h5>
+                        <p class="card-text">Stomach ulcers, or gastric ulcers, are painful sores in your stomach lining.</p>
+                    </div>
+                </div>
             </div>
-
-            <!-- Right Section: Social Media Icons -->
-            <div class="col-12 col-md-4 footer-social">
-                <h6 class="footer-heading">FOLLOW US!</h6>
-                <div class="social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/5c8392f5-9e7a-4438-8691-a466ce3f3d0b.webp" alt="Portfolio Diet" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">What Is the Portfolio Diet, and What Are Its Benefits?</h5>
+                        <p class="card-text">The Portfolio Diet is an eating plan designed to lower your cholesterol levels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/alsamer.png" alt="Alzheimer's Disease" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">How Does Alzheimer’s Disease Change the Brain?</h5>
+                        <p class="card-text">The neurodegenerative condition leads to progressive and irreversible damage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/OIP.jfif" alt="Bird Flu Virus" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Can You Get the Bird Flu Virus by Drinking Dairy Milk?</h5>
+                        <p class="card-text">Plus, learn the difference between pasteurized and raw milks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <!-- Row 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/healthy.jpg" alt="Healthy Eating" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthy Eating: What You Need to Know</h5>
+                        <p class="card-text">Learn the importance of a balanced diet for optimal health.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/unnamed.jpg" alt="Exercise Benefits" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Benefits of Regular Exercise</h5>
+                        <p class="card-text">Discover how regular physical activity can improve your health.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/mental.webp" alt="Mental Health" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Understanding Mental Health</h5>
+                        <p class="card-text">A guide to recognizing and managing mental health issues.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="TGH/HEALTH/losingweight.jpg" alt="Diet Tips" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Top 5 Diet Tips for Weight Loss</h5>
+                        <p class="card-text">Effective strategies for sustainable weight loss success.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
-
-
-
-
     
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="IMAGE/jracsicon.png" alt="Logo" width="70" height="auto">
+            <strong>JRACS Pharmaceutical</strong>
+
+            <p class="footer-links">
+                <a href="home.html">HOME</a>
+                |
+                <a href="service.html">SERVICE</a>
+                |
+                <a href="storelocator.html">STORE LOCATOR</a>
+                |
+                <a href="product.html">PRODUCT</a>
+                |
+                <a href="tips.html">TIPS FOR GOOD HEALTH</a>
+            </p>
+
+            <p class="footer-company-name">
+                Â© 2024 JRACS. All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="bi bi-geo-alt-fill"></i>
+                <p><span>Door 2, Lahom Bldg</span>J Miranda Ave, Naga City</p>
+                
+            </div>
+            <div>
+                <i class="bi bi-telephone-fill"></i>
+                <span>+639 957304068</span>
+            </div>
+            <div>
+                <i class="bi bi-envelope-fill"></i>
+                <span>jracspharmaceutical@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <strong>JRACS Pharmaceutical</strong> is a pharmacy that sells medecine 
+            </p>
+            <div class="footer-icons">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
