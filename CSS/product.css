@@ -12,7 +12,6 @@
 body {
     min-height: 100vh;
     font-family: "Century Gothic", sans-serif;
-   
     background-color: var(--first-color);
 }
 h1 {
@@ -36,7 +35,6 @@ h1 {
     position: relative;
     max-width: 1350px;
     width: 100%;
-    margin: 40px auto;
     background-color: var(--first-color)
 }
 .filter-buttons{
@@ -46,8 +44,8 @@ h1 {
     gap: 5px;
 }
 button{
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 10px 10px;
+    font-size: 12px;
     background-color: aliceblue;
     border: none;
     border-radius: 6px;
@@ -55,7 +53,7 @@ button{
 }
 button.active{
     background: var(--second-color);
-    color: white;
+    color: var(--first-color)
 }
 .filterable-card{
     display: flex;
@@ -63,66 +61,104 @@ button.active{
     gap: 15px;  
     flex-wrap: wrap;
 }
-.card{
-    flex-grow: 1;
-    flex-basis: 175px;
+.card {
+    position: relative; /* Allows absolute positioning within */
+    width: 200px; /* Fixed width */
+    height: 300px; /* Fixed height */
     background-color: var(--second-color);
-    padding: 3px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* To prevent content from spilling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
-.card.hide{
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge the card by 5% */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase shadow intensity */
+}
+
+.card.hide {
     display: none;
 }
-.card .img{
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+
+.card .img {
+    width: 100%; /* Ensure the image spans the full width of the card */
+    height: 210px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    border-radius: 8px 8px 0 0; /* Match the card's top border radius */
 }
-.card-body{
-    padding: 15px 20px 20px;
+
+.card-body {
+    padding: 15px 15px 15px;
 }
-.card-title{
-    font-size: 20px;
-    font-weight: 500;
-    color:black;
+
+.card-title {
+    font-size: clamp(14px, 2vw, 15px); /* Dynamically adjust font size */
+    font-weight: 600;
+    color: black;
+    text-align: left; /* Optional for alignment */
+    overflow: hidden; /* Prevent overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
-.card-text{
-    font-size: 10px;
-    color:black;
+
+.card-text {
+    font-size: clamp(8px, 1.5vw, 10px); /* Dynamically adjust font size */
+    color: black;
+    text-align: justify; /* Optional for better text flow */
+    overflow-wrap: break-word; /* Break long words */
+    line-height: 1.2; /* Adjust line height for readability */
 }
-/*BUTTON PRICE*/
+
+
 .button-container {
+    position: absolute; /* Fix it within the card */
+    bottom: 10px; /* Distance from the bottom of the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct for centering */
+    width: 80%; /* Fixed width for consistency */
+    height: 40px; /* Fixed height */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--third-color);
-    border-radius: 30px; /* Reduced the border radius */
-    padding: 3px; /* Reduced the padding */
-    width: fit-content;
+    border-radius: 20px; /* Adjusted for aesthetics */
+    padding: 0 10px; /* Inner spacing */
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
 .left-section {
-    padding: 7px 20px; /* Reduced horizontal and vertical padding */
+    flex: 1; /* Takes up available space */
+    text-align: center;
+    padding: 5px 10px;
     background-color: var(--second-color);
     color: var(--first-color);
-    border-radius: 15px; /* Reduced the border radius */
-    font-size: 12px; /* Smaller font size */
+    border-radius: 15px;
+    font-size: 12px;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .right-section {
-    padding: 7px 10px; /* Reduced padding */
+    flex: 1; /* Takes up available space */
+    text-align: center;
+    padding: 5px 10px;
     background-color: var(--fourth-color);
     color: white;
-    font-size: 12px; /* Smaller font size */
+    font-size: 12px;
     font-weight: bold;
-    border-radius: 20px; /* Reduced the border radius */
+    border-radius: 15px;
 }
-/*Footer Navbar*/
+
+
+
+
 .navbar{
     padding: 5px 30px;
     background-color: var(--second-color) !important; 
@@ -152,56 +188,67 @@ button.active{
 .custom-navbar .nav-item {
     margin-right: 50px;
     font-size: 15px;
-    font-weight: 900; 
+    font-weight: 900;
+    
 }
 .d-flex .btn {
     font-size: 15px; 
     font-weight: bold; 
 }
-.btn-outline-success {
-    border-color: #28a745; 
-    color: #28a745; 
-    transition: background-color 0.3s, color 0.3s; 
-}
-.btn-outline-success:hover {
-    background-color: var(--third-color);
-    color: var(--second-color);
-    border-color: var(--third-color);
-}
-footer {
-    background-color: var(--third-color);
-}
-footer h6 {
-    color: black;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
 
-.footer-nav a {
-    font-size: 2px;
-    font-weight: bold;
-}
-
-footer .bi {
-    transition: transform 0.2s;
-}
-
-footer .bi:hover {
-    transform: scale(1.2);
-}
-.social-icons {
+/* Search Button */
+/* Updated Search Bar Styles */
+.search-container {
+    font-family: "Century Gothic", sans-serif;
     display: flex;
-    color: var(--second-color);
-    justify-content: center;
-    margin-top: 10px;
+    position: relative;
+    left: 170px;
+    justify-content: flex-end; /* Align search bar to the right */
+    align-items: center; /* Center elements vertically */
+    padding: 10px;
+    width: 400px;
+    margin: 10px 0; /* Add spacing from other elements */
 }
-.social-icon {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: var(--second-color); 
-    transition: transform 0.3s ease, color 0.3s ease;
+
+.input-group {
+    display: flex; /* Ensure input and button are in the same row */
+    align-items: center; /* Center input and button vertically */
+    max-width: 700px; /* Limit the search bar's width */
+    width: 100%; /* Make it responsive */
 }
-.social-icon:hover {
-    transform: scale(1.2); 
+
+#search-bar {
+    flex: 1; /* Allow the input to take up available space */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px; /* Rounded edges for the input */
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
 }
-/**/
+
+#search-bar:focus {
+    border-color: var(--second-color); /* Change border color on focus */
+    box-shadow: 0 4px 10px rgba(1, 146, 21, 0.4); /* Highlighted shadow */
+}
+
+.search-btn {
+    padding: 10px 20px; /* Ensure button height matches input height */
+    border-radius: 0 20px 20px 0; /* Rounded edges for the button */
+    background-color: var(--first-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: var(--fourth-color); /* Subtle hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.search-btn i {
+    font-size: 18px;
+    vertical-align: middle; /* Align icon vertically */
+}

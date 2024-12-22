@@ -5,279 +5,612 @@
   font-family: "Century Gothic", sans-serif;
 }
 
-:root{
+:root {
   --first-color: #5d9c59;
   --second-color: #c7e8ca;
   --third-color: #79c280;
+  --fourth-color: #386835;
+  --fifth-color: #82cf8a;
+  --sixth-color: #206325;
 }
 
 body {
+  font-family: "Century Gothic", sans-serif;
+  margin-top: 70px; /* Account for fixed navbar height */
   line-height: 1.6;
+  font-family: "Century Gothic", sans-serif;
+
+  background: linear-gradient(to right, var(--first-color) 45%, var(--second-color));
+  /* Fallback solid background color for older browsers */
   background-color: var(--first-color);
+  color: #fff; /* Ensure text is readable */
 }
 
-/*Footer Navbar*/
-.navbar{
+/* Navigation Styles */
+.navbar {
+  position: fixed; /* Navbar stays at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
   padding: 5px 30px;
-  background-color: var(--second-color) !important; 
-  border-bottom: 1px solid #b4d9b7; 
+  background-color: var(--second-color) !important;
+  border-bottom: 1px solid #b4d9b7;
 }
 
 .nav-link {
   color: var(--first-color) !important;
-  text-decoration: none; 
-  position: relative; 
+  text-decoration: none;
+  position: relative;
 }
 
 .nav-link::after {
-  content: ""; 
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
-  width: 0; 
-  height: 2px; 
+  width: 0;
+  height: 2px;
   background-color: var(--first-color);
-  transition: width 0.3s ease; 
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-  width: 100%; 
+  width: 100%;
 }
+
 .custom-navbar .nav-item {
   margin-right: 50px;
   font-size: 15px;
-  font-weight: 900; 
+  font-weight: 900;
 }
+
 .d-flex .btn {
-  font-size: 15px; 
-  font-weight: bold; 
-}
-.btn-outline-success {
-  border-color: #28a745; 
-  color: #28a745; 
-  transition: background-color 0.3s, color 0.3s; 
-}
-.btn-outline-success:hover {
-  background-color: var(--third-color);
-  color: var(--second-color);
-  border-color: var(--third-color);
-}
-
-
-footer {
-  background-color: var(--third-color)
-}
-footer h6 {
-  color: black;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.footer-nav a {
-  font-size: 2px;
+  font-size: 15px;
   font-weight: bold;
 }
-
-footer .bi {
-  transition: transform 0.2s;
-}
-
-footer .bi:hover {
-  transform: scale(1.2);
-}
-.social-icons {
+/* Custom Line Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
   display: flex;
-  color: var(--second-color);
   justify-content: center;
-  margin-top: 10px;
+  gap: 10px; /* Space between lines */
+  z-index: 10;
 }
-.social-icon {
-  font-size: 1.5rem;
-  margin: 0 10px;
-  color: var(--second-color); 
-  transition: transform 0.3s ease, color 0.3s ease;
+
+.carousel-indicators div {
+  width: 40px; /* Width of the line */
+  height: 4px; /* Height of the line */
+  background-color: rgba(56, 141, 6, 0.993); /* Default line color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.social-icon:hover {
-  transform: scale(1.2); 
+
+.carousel-indicators div.active {
+  background-color: #316b01; /* Active line color */
 }
-/**/
-/* Hero Section Styles */
-.hero-section {
-  display: grid;
-  max-height: 70%;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  
+.carousel-item h1 {
+  color: var(--second-color);
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle text shadow */
+}
+.carousel-item p{
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+/* Product Cards */
+.custom-card {
+  margin: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.offer-heading {
+  color: var(--fifth-color);
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; /* Allow pseudo-element positioning */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.offer-heading::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center the underline */
+  bottom: -4px; /* Adjust space between text and underline */
+  width: 320px; /* Set the width of the underline */
+  height: 7px; /* Adjust thickness */
+  background-color: var(--sixth-color); /* Custom underline color */
+  transform: translateX(-50%); /* Center the underline */
+}
+.custom-card h5 {
+  color: var(--sixth-color);
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 
+    1px 1px 0 var(--second-color),  
+    -1px -1px 0 var(--second-color),  
+    1px -1px 0 var(--second-color),
+    -1px 1px 0 var(--second-color); /* Multiple shadows to create an outline effect */
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.custom-card:hover .card-img-top {
+  filter: blur(2px); /* Apply blur effect on hover */
+}
+
+.card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  visibility: hidden;
+}
+
+.custom-card:hover .card-body {
+  visibility: visible;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+/*FEATURED PRODUCT*/
+
+/* History Section Styles */
+.history {
   background-color: var(--second-color);
   border-radius: 41px;
-  margin: 3rem;
 }
 
 .content-left {
-  padding: 3rem;
+  padding: 2rem;
 }
-
+/* Subtitle Customization */
 .subtitle {
-  color: var(--first-color);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 20px; /* Adjust font size */
+  font-weight: 400; /* Make the text bold */
+  color: green !important; /* Force green color to override */
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
 }
 
+/* Specific for text-primary if needed */
+.subtitle.text-primary {
+  color: var(--first-color) !important; /* Use the primary color defined in your CSS */
+}
 .main-title {
   font-size: 3.5rem;
   font-weight: 900;
-  color: #333;
+  color: black;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .description {
+  text-align: justify;
   color: #666;
-  
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn-primary, .btn-secondary {
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--first-color);
-  color: white;
-  border: none;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--first-color);
-  border: 2px solid var(--first-color);
 }
 
 .content-right {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .hero-image {
   width: 100%;
-  height: 100%;
-  
+  height: auto;
   border-radius: 0px 41px 41px 0px;
 }
 
-/* Features Section Styles */
-.features-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 4rem 2rem;
+/* Custom container class hexCont */
+.hexCont {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%; /* Make sure it uses the full width available */
 }
 
-.feature-card {
-  background-color: var(--second-color);
-  padding: 2rem;
-  border-radius: 15px;
+/* Box styling */
+.box {
   text-align: center;
-  transition: transform 0.3s ease;
+  background-color: var(--sixth-color);
+  color: white;
+  width: 190px;
+  height: 185px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/*
+.box:hover {
+  cursor: default;
+  transform: scale(1.05); 
+  background-color: var(--fourth-color); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}*/
+/* Heading styling */
+.box h1 {
+  margin: 0;
+  font-size: 5.5em;
+  color: var(--third-color);
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  text-transform: capitalize;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
+/* Specific year and founded styling */
+.box .fyear {
+  margin: 0;
+  font-size: 4.5em;
+  color: var(--second-color);
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
 }
 
-.feature-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
+.box .founded {
+  margin: 0;
+  font-size: 1.5em;
+  color: var(--second-color);
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
 }
 
-.feature-icon img {
+/* Paragraph styling */
+.box p {
+  margin: -10px 0 0 0;
+  font-size: 12px;
+  color: var(--third-color);
+  font-weight: 700;
+}
+
+/* Custom Hero Section Styling */
+.custom-hero {
+  width: 100%; /* Full width */
+  height: 400px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff; /* Ensure text is visible */
+  background-size: cover; /* Cover full section */
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Overlay effect for readability */
+.custom-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  z-index: 1;
+}
+.card-custom {
+  background-color: #b0d1b4;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
 }
 
-.feature-card h3 {
-  color: var(--first-color);
-  margin-bottom: 1rem;
+.card-custom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 10px;
+  max-width: 150px; /* Optionally add a max-width to control size */
+  max-height: 150px; /* Optionally add a max-height to control size */
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin-left: auto; /* Centers the image */
+  margin-right: auto; /* Centers the image */
 }
 
-.feature-card p {
+.card-custom h5 {
+  font-weight: bold;
+}
+.card-custom .BM{
+  text-align: center; 
+  font-size: 0.9rem;
+}
+.card-custom h3{
+  text-align: center;
+  font-size: 0.9rem;
+}
+.card-custom p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.owner {
+  background-color: #d4e8d2; /* Slightly different color for owner */
+}
+
+.branch-manager {
+  background-color: #b0d1b4; /* Default color for branch managers */
+}
+.Tabs {
+  background-color: #e0f8ff; /* Light blue background */
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 350px; /* Minimum height to allow flexible content */
+  width: 100%; /* Full width in columns */
+  max-width: 400px; /* Prevent Tabs from getting too wide */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content */
+}
+
+
+.Tabs h5 {
+  color: #333;
+  font-weight: bold;
+}
+.Tabs p {
   color: #666;
 }
 
-/* Hover Effects */
-.btn-primary:hover, .btn-secondary:hover {
-  transform: translateY(-2px);
+/* General Button Style */
+.btn-custom {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 20px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .hero-section {
-      grid-template-columns: 1fr;
-  }
+.btn-custom:hover {
+  background-color: #f8f8f8;
+}
 
-  .features-section {
-      grid-template-columns: 1fr;
-  }
+/* Specific Button Classes */
+.see {
+  background-color: var(--first-color); /* Blue */
+  color: black; 
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.see:hover {
+  background-color: var(--fourth-color);
+  color: #fff;
+}
 
-  .main-title {
-      font-size: 2.5rem;
-  }
+.book {
+  background-color: var(--first-color); 
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.book:hover {
+  background-color: var(--fourth-color);
+  color: #fff;
+}
 
-  .cta-buttons {
-      flex-direction: column;
-  }
+.cont {
+  background-color: var(--first-color); 
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cont:hover {
+  background-color: var(--fourth-color);
+  color: #fff;
+}
+.icon-custom {
+  font-size: 4rem; /* Custom size for the icons */
+  color: var(--first-color);
+  margin-bottom: 1rem; /* Spacing between icon and text */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
 
-  .content-left {
-      padding: 1rem;
+.icon-custom:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: var(--fourth-color);
+}
+ /* Card Styling */
+ .info-card {
+  background-color: var(--fifth-color);
+  border-radius: 15px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+/* Customizing icons */
+.info-card i {
+  font-size: 4rem; /* Larger icon size */
+  color: var(--fourth-color);
+  margin: 7px;
+}
+
+.info-card i:hover {
+  color: #28a745;  /* Green color on hover */
+  transform: scale(1.2); /* Zoom in on hover */
+  transition: all 0.3s ease;
+}
+
+.info-card h5 {
+  color: black;
+  font-weight: bold;
+  margin-top: 5PX;
+}
+.info-card p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px) {
+  footer {
+      position: static;
   }
 }
 
-@media (max-width: 576px) {
-  .navbar {
-      padding: 5px 15px;
-  }
-
-  .custom-navbar .nav-item {
-      margin-right: 20px;
-  }
-
-  .main-title {
-      font-size: 2rem;
-  }
-
-  .hero-section {
-      margin: 1rem;
-      padding: 2rem 1rem;
-  }
+.footer-distributed {
+  background-color: var(--third-color);
+  box-sizing: border-box;
+  widows: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
 }
 
-.hexagon {
-  width: 5rem;
-  position: relative;
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
   display: inline-block;
+  vertical-align: top;
 }
 
-.hexagon img{
-  width: 100%;
-  height: auto;
+.footer-distributed .footer-left {
+  width: 40%;
 }
 
-.icon-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #c7e8ca;
-  font-size: 3rem;
+.footer-distributed .footer-left strong {
+  font-size: 1.5rem;
+}
+
+.footer-distributed .footer-links {
+  color: var(--second-color);
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--second-color);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  color: var(--second-color);
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--second-color);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  color: var(--first-color);
+}
+
+.footer-distributed .footer-links a:hover {
+  color: var(--first-color);
+}
+
+@media(max-width: 1020px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+
+  .footer-distributed .footer-center {
+      margin-left: 0;
+  }
 }
